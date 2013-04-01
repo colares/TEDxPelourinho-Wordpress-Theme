@@ -17,8 +17,8 @@
 		</ul>
 		
 		<a href="/event-details/" class="flagNav">
-			<h2>Friday May 25th 2012</h2>
-			<h3>Telus Spark Science Centre</h3>
+			<h2>12 de Outubro de 2013</h2>
+			<h3>Teatro SESC-SENAC Pelourinho</h3>
 		</a>
 
 	</nav>
