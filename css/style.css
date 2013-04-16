@@ -237,8 +237,8 @@ a.logo_lrg{
 	float: left;
 	margin-top: 30px;
 	padding: 0;
-	background: url(/img/logo_tedxyycLRG.gif) no-repeat;
-	width: 296px;
+	background: url(/img/logo_tedxyycLRG.png) no-repeat;
+	width: 400px;
 	height: 64px;
 	text-indent: 0;
 	line-height: 1px;
@@ -247,7 +247,7 @@ a.logo_lrg{
 
 header hgroup{
 	background: url(/img/bg_flag.gif) no-repeat;
-	width: 352px;
+	width: 380px;
 	height: 78px;
 	text-indent: -9999px;
 	line-height: 1px;
@@ -452,12 +452,12 @@ a.mobileNav_btn{
 nav a.logo_sm{
 	display: block;
 	width: 146px;
-	height: 33px;
+	height: 86px;
 	margin: 40px auto;
 	background: url(/img/logo_tedxyycSM.png) center center no-repeat;
 	text-indent: -9999px;
-	margin-top: 70px;
-	margin-bottom: 50px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 nav ul{
