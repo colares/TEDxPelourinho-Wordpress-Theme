@@ -3,8 +3,14 @@
 				<section class="flexslider row">
 					<ul class="slides">
 						<li>
-							<a href="/event-details" title="Watch the livestream on may 25th"><img src="/assets/homepage_livestream.jpg" alt="Watch the livestream on may 25th" width="940" height="446" /></a>
-						</li>				
+							<a href="/event-details" title="Watch the livestream on may 25th"><img src="http://placehold.it/932x300/000000" alt="Watch the livestream on may 25th" width="932" height="300" /></a>
+						</li>	
+						<li>
+							<a href="/event-details" title="Watch the livestream on may 25th"><img src="http://placehold.it/932x300/ffcc00" alt="Watch the livestream on may 25th" width="932" height="300" /></a>
+						</li>
+						<li>
+							<a href="/event-details" title="Watch the livestream on may 25th"><img src="http://placehold.it/932x300/00ff00" alt="Watch the livestream on may 25th" width="932" height="300" /></a>
+						</li>			
 					</ul>
 				</section>
 				
@@ -12,17 +18,17 @@
 				
 					<div class="row">
 						<div class="four columns">
-							<h2>Featured 2012 Speakers</h2>
+							<h2>Palestrantes</h2>
 						</div>
 						<div class="eight columns">
-							<p>Our 2012 committee has been hard at work curating a list of speakers that we think will educate, inspire, and motivate. Take a peek at our 2012 speaker lineup to date. <a href="/speakers" class="readMore">View our speaker archive.</a></p>
+							<p>Our 2012 committee has been hard at work curating a list of speakers that we think will educate, inspire, and motivate. Take a peek at our 2012 speaker lineup to date. <a href="/speakers" class="readMore">Veja nosso histórico de palestrantes.</a></p>
 						</div>
 					</div>
 					<?php
 						$args = array(			  		
 			  				'post_type' => 'speakers',
 			  				'taxonomy' => 'tedxyycYear',
-			  				'term' => '2012',
+			  				'term' => $roots_options['tedx_event_main_term'],
 			  				'posts_per_page' => -1,
 			  				'orderby' => 'title',
 			  				'order' => 'ASC'
@@ -46,18 +52,19 @@
 					</ul>
 					<?php wp_reset_query(); ?>
 					
-					<a href="/speakers" class="sectionCTA row">view all the <span class="tedx">TEDx</span><span class="yyc">YYC</span> speakers</a>
+					<a href="/speakers" class="sectionCTA row">veja todos os palestrandes do <span class="tedx">TEDx</span><span class="yyc"><?php print $roots_options['tedx_event_name'];?></span></a>
 				
 				</section>
 									
 				<section class="recentNews row">
 				
-					<h2>Recent News</h2>
+					<h2>Blog</h2>
 					
 					<?php
 						$args = array(
-			  				'posts_per_page' => 3,
-			  				'year' => '2012'
+			  				'posts_per_page' => 3
+//                      ,
+//			  				'year' => '2012'
 							);
 						query_posts($args);
 					?>
@@ -76,7 +83,7 @@
 						<?php wp_reset_query(); ?>
 					</div>
 					
-					<a href="/news" class="sectionCTA row">read all the <span class="tedx">TEDx</span><span class="yyc">YYC</span> news</a>
+					<a href="/news" class="sectionCTA row">leia as novidades do <span class="tedx">TEDx</span><span class="yyc"><?php print $roots_options['tedx_event_name'];?></span></a>
 					
 				</section>
 				
@@ -85,7 +92,7 @@
 					<div class="row">
 				
 						<div class="three columns">
-							<h2>TED Video Picks</h2>
+							<h2>Grandes vídeos do TED</h2>
 							<p>We are big supporters of sharing and collaboration, and want to know where you get your inspiration. <a href="mailto:info@tedxyyc.com?subject=TED Video Pick Suggestion&body=Here's my TED Video Pick suggestion and why…" class="readMore">Submit your favourite TED talk.</a></p>
 						</div>
 						
@@ -109,16 +116,16 @@
 					
 					</div>
 					
-					<a href="/ted-video-picks/" class="sectionCTA row">view all the favourite <span class="tedx">TED</span> talks</a>
+					<a href="/ted-video-picks/" class="sectionCTA row">veja todas as palestras favoritvas do<span class="tedx">TED</span></a>
 					
 				</section>
 				
 				<section class="whatisTED row">
 				
 					<h2>What is TEDx?</h2>
-					<p>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxYYC, where x = independently organized TED event. At our TEDxYYC event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized. <a href="/about" class="readMore">Learn more about TEDxYYC.</a></p>
+					<p>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDx<?php print $roots_options['tedx_event_name'];?>, where x = independently organized TED event. At our TEDx<?php print $roots_options['tedx_event_name'];?> event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized. <a href="/about" class="readMore">Leia mais sobre TEDx<?php print $roots_options['tedx_event_name'];?>.</a></p>
 					
-					<a href="http://www.ted.com/tedx" class="sectionCTA row">learn more about the <span class="tedx">TEDx</span> program</a>
+					<a href="http://www.ted.com/tedx" class="sectionCTA row">leia mais sobre o programa <span class="tedx">TEDx</span></a>
 					
 				</section>
 

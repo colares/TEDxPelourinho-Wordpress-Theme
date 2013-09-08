@@ -4,9 +4,11 @@
 		    
 	</div> <!-- end of #wrap -->
 	
+	<?php $roots_options = roots_get_theme_options(); ?>
+
 	<nav id="mainNav">
 			
-		<a href="<?php echo home_url(); ?>" class="logo_sm">TEDxYYC</a>
+		<a href="<?php echo home_url(); ?>" class="logo_sm">TEDx<?php print $roots_options['tedx_event_name'];?></a>
 	
     	<?php wp_nav_menu(array('theme_location' => 'primary_navigation', 'depth' => 1)); ?>
 		
@@ -50,28 +52,31 @@
 		</section>
 		
 		<section class="recentTweet three columns clearfix">
-			<h2>The Twitterverse</h2>
+<!--			<h2>The Twitterverse</h2>-->
 			
 			 <?php // custom twitter latest widget cuz others don't work
-				$username = "tedxyyc";
-				$prefix = "<p>";
-				$suffix = "</p>";
-				$feed = "http://search.twitter.com/search.atom?q=from:" . $username . "&rpp=1";
-				
-				function parse_feed($feed) {
-				    $stepOne = explode("<content type=\"html\">", $feed);
-				    $stepTwo = explode("</content>", $stepOne[1]);
-				    $tweet = $stepTwo[0];
-				    $tweet = str_replace("&lt;", "<", $tweet);
-				    $tweet = str_replace("&gt;", ">", $tweet);
-				    return $tweet;
-				}
-				
-				$twitterFeed = file_get_contents($feed);
-				echo stripslashes($prefix) . parse_feed($twitterFeed) . stripslashes($suffix);
+          
+          
+				//$username = "tedxyyc";
+//				$prefix = "<p>";
+//				$suffix = "</p>";
+//				$feed = "http://search.twitter.com/search.atom?q=from:" . $username . "&rpp=1";
+//				
+//				function parse_feed($feed) {
+//				    $stepOne = explode("<content type=\"html\">", $feed);
+//				    $stepTwo = explode("</content>", $stepOne[1]);
+//				    $tweet = $stepTwo[0];
+//				    $tweet = str_replace("&lt;", "<", $tweet);
+//				    $tweet = str_replace("&gt;", ">", $tweet);
+//				    return $tweet;
+//				}
+//				
+//				$twitterFeed = file_get_contents($feed);
+//				echo stripslashes($prefix) . parse_feed($twitterFeed) . stripslashes($suffix);
+            
 			?>
 			
-			<span style="float:right;">TEDxYYC on <a href="http://twitter.com/tedxyyc/">Twitter.com</a></span>
+<!--			<span style="float:right;">TEDx<?php //print $roots_options['tedx_event_name'];?> on <a href="http://twitter.com/tedxyyc/">Twitter.com</a></span>-->
 				
 		</section>
 		
@@ -79,7 +84,7 @@
 			<h2>Legal Stuff</h2>
 			<p>This independent TEDx event is operated under license from TED.</p>
 			<p class="legal"><a href="/privacy-policy-terms-of-service/">Privacy Policy</a>   |   <a href="/privacy-policy-terms-of-service/">Terms of Use</a><br />
-			© 2012 TEDxYYC. All rights reserved.</p>
+			© 2013 TEDx<?php print $roots_options['tedx_event_name'];?>. All rights reserved.</p>
 		</section>
 		
 	</footer>

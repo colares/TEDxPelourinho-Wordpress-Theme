@@ -223,6 +223,27 @@ function roots_theme_options_render_page() {
       <input type="hidden" value="1" name="roots_theme_options[first_run]" />
       <table class="form-table">
 
+        <tr valign="top"><th scope="row"><?php _e('TEDx Event Name', 'roots'); ?></th>
+          <td>
+            <fieldset><legend class="screen-reader-text"><span><?php _e('TEDx Event Name', 'roots'); ?></span></legend>
+              <input type="text" name="roots_theme_options[tedx_event_name]" id="tedx_event_name" value="<?php echo esc_attr($roots_options['tedx_event_name']); ?>" class="regular-text" />
+              <br />
+              <small class="description"><?php _e('Default:', 'roots'); ?> <span><?php echo $roots_default_options['tedx_event_name']; ?></span></small>
+            </fieldset>
+          </td>
+        </tr>
+        
+
+        <tr valign="top"><th scope="row"><?php _e('TEDx event main term', 'roots'); ?></th>
+          <td>
+            <fieldset><legend class="screen-reader-text"><span><?php _e('TEDx event main term', 'roots'); ?></span></legend>
+              <input type="text" name="roots_theme_options[tedx_event_main_term]" id="tedx_event_main_term" value="<?php echo esc_attr($roots_options['tedx_event_main_term']); ?>" class="regular-text" />
+              <br />
+              <small class="description"><?php _e('Default:', 'roots'); ?> <span><?php echo $roots_default_options['tedx_event_main_term']; ?></span></small>
+            </fieldset>
+          </td>
+        </tr>
+
         <tr valign="top" class="radio-option"><th scope="row"><?php _e('CSS Grid Framework', 'roots'); ?></th>
           <td>
             <fieldset class="roots_css_frameworks"><legend class="screen-reader-text"><span><?php _e('CSS Grid Framework', 'roots'); ?></span></legend>
@@ -341,6 +362,14 @@ function roots_theme_options_validate($input) {
 
   // set the value of the main container class depending on the selected grid framework
   $output['container_class'] = $roots_css_frameworks[$output['css_framework']]['classes']['container'];
+
+  if (isset($input['tedx_event_name'])) {
+    $output['tedx_event_name'] = wp_filter_nohtml_kses($input['tedx_event_name']);
+  }
+  
+ if (isset($input['tedx_event_main_term'])) {
+    $output['tedx_event_main_term'] = wp_filter_nohtml_kses($input['tedx_event_main_term']);
+  }
 
   if (isset($input['main_class'])) {
     $output['main_class'] = wp_filter_nohtml_kses($input['main_class']);

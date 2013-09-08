@@ -189,7 +189,7 @@ function create_year_taxonomy() {
     	'add_new_item' => __( 'Add New Year Spoken' ),
     	'new_item_name' => __( 'New Year Spoken' )
   	); 	
-
+   
   	register_taxonomy('tedxyycYear','speakers',array(
     	'hierarchical' => false,
     	'labels' => $labels_year,
