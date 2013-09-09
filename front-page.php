@@ -52,7 +52,7 @@
 					</ul>
 					<?php wp_reset_query(); ?>
 					
-					<a href="/speakers" class="sectionCTA row">veja todos os palestrandes do <span class="tedx">TEDx</span><span class="yyc"><?php print $roots_options['tedx_event_name'];?></span></a>
+					<a href="/palestrantes" class="sectionCTA row">veja todos os palestrantes do <span class="tedx">TEDx</span><span class="yyc"><?php print $roots_options['tedx_event_name'];?></span></a>
 				
 				</section>
 									
@@ -83,7 +83,7 @@
 						<?php wp_reset_query(); ?>
 					</div>
 					
-					<a href="/news" class="sectionCTA row">leia as novidades do <span class="tedx">TEDx</span><span class="yyc"><?php print $roots_options['tedx_event_name'];?></span></a>
+					<a href="/blog" class="sectionCTA row">leia as novidades do <span class="tedx">TEDx</span><span class="yyc"><?php print $roots_options['tedx_event_name'];?></span></a>
 					
 				</section>
 				

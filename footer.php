@@ -30,7 +30,7 @@
 	<footer class="row">
 								
 		<section class="navigation three columns clearfix">
-			<h2>Navigation</h2>
+			<h2>Navegação</h2>
 			<?php wp_nav_menu(array(
 				'theme_location' => 'footer_left',
 				'menu_class' => 'left'
@@ -81,10 +81,10 @@
 		</section>
 		
 		<section class="legalStuff three columns clearfix">
-			<h2>Legal Stuff</h2>
-			<p>This independent TEDx event is operated under license from TED.</p>
-			<p class="legal"><a href="/privacy-policy-terms-of-service/">Privacy Policy</a>   |   <a href="/privacy-policy-terms-of-service/">Terms of Use</a><br />
-			© 2013 TEDx<?php print $roots_options['tedx_event_name'];?>. All rights reserved.</p>
+			<h2>Legal</h2>
+			<p>Este evento TEDx independente funciona sob licença do TED.</p>
+			<p class="legal"><a href="/privacy-policy-terms-of-service/">Política de Privacidade</a>   |   <a href="/privacy-policy-terms-of-service/">Termos de Uso</a>  |   <a href="https://github.com/colares/TEDxPelourinho-Wordpress-Theme">Tema baseado no TEDxYYC</a><br />
+			© 2013 TEDx<?php print $roots_options['tedx_event_name'];?>. Todos os direitos reservados.</p>
 		</section>
 		
 	</footer>

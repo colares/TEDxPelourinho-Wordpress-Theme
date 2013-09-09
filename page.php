@@ -8,9 +8,7 @@
 		</div>
           
       	<aside id="sidebar" class="four columns" role="complementary">
-      	
-      		<?php echo 'page.php' ?>
-			
+             
 			<div class="container">
 				<?php dynamic_sidebar("Page Sidebar"); ?>
 			</div>
