@@ -72,7 +72,7 @@ Template Name: Speakers
         $yearRange = 3;
         
 
-        $date = new DateTime;
+        
         
         $terms = get_terms("tedxyycYear");
                 
@@ -134,7 +134,7 @@ Template Name: Speakers
           
       <?php
             } // END OF ID post_count
-            $date->sub(new DateInterval("P1Y"));
+            
         } // END OF FOREACH
       ?>
 
